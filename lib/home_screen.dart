@@ -8,7 +8,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('k');
     return Scaffold(
       drawer: const SideDrawer(),
       appBar: AppBar(
