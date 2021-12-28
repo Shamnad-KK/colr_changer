@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('k');
     return Scaffold(
       drawer: const SideDrawer(),
       appBar: AppBar(
@@ -36,10 +37,9 @@ class HomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Consumer<MyClass>(
-            builder: (BuildContext context, value, Widget? child) => Container(
-              child: const Center(child: Text('Color changes here')),
-            ),
+          Container(
+            color: context.watch<MyClass>().colour1,
+            child: const Center(child: Text('Color changes here')),
           ),
         ],
       )),
